@@ -1,0 +1,41 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+
+.header
+{
+    font-family: sans-serif;
+
+    height:100vh;
+
+    justify-content: center;
+
+}
+
+.navbar-style
+{
+    box-shadow:0 5px 10px blanchedalmond;
+}
+.logo
+{
+    height: 58px;
+    padding: 2px 10px;
+}
+.heading
+{
+   padding-left: 350px;
+
+}
+
+.col-md-4-col-sm-4
+{
+    font-family: sans-serif;
+
+
+}
+.al
+{
+    padding-left: 350px;
+}

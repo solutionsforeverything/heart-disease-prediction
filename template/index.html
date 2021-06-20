@@ -1,0 +1,111 @@
+<html>
+
+<head>
+<meta charset="UTF-8"/>
+<title> Heart Disease Prediction </title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<body background="bg.jpg" >
+<div class="header">
+    <nav class="navbar navbar-style">
+        <div class="container">
+            <div class="navbar-header">
+                <a href=""><img class="logo" src="logo.png"></a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li> <a href="index" >Home</a></li>
+                <li> <a href="">link dataset</a></li>
+                <li> <a href="prdict.html">predict</a></li>
+                <li> <a href="contact.html">contactus</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <h1 class="heading" align="center" style="color: brown">heart disease prediction</h1>
+
+        </div>
+    </div>
+
+    <div class="al" >
+    <h3 align="center"> Check the Heart Disease </h3><br><br>
+
+    <h4 align="center"> Enter the details of the patient:</h4>
+    <br>
+    <form method="post" enctype="multipart/form-data" action="predictdisease" >
+        {% csrf_token %}
+
+        <div class="col-md-4-col-sm-4" align="center"> <label >1.Age:</label><input name="age" type="number" value="43" ></div><br><br>
+
+        <div class="col-md-4-col-sm-4" align="center" > <label >2.Sex:</label>
+        <input type="radio" id="male" name="sex" value="1">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="sex" value="0">
+        <label for="female">Female</label></div><br><br>
+
+        <div class="col-md-4-col-sm-4" align="center"> <label>3.Chest pain type:</label>
+        <input type="radio" name="cp" value="0">
+        <label for="0">0(typical angina)</label>
+        <input type="radio" name="cp" value="1">
+        <label for="1">1(atypical angina)</label>
+        <input type="radio"  name="cp" value="2">
+        <label for="2">2(non-anginal pain)</label>
+        <input type="radio"  name="cp" value="3">
+        <label for="3">3(asymptomatic)</label></div><br><br>
+
+        <div class="col-md-4-col-sm-4" align="center"> <label >4.Resting Blood Pressure:</label><input name="trestbps" type="number" value="122"></div><br><br>
+        <div class="col-md-4-col-sm-4" align="center"> <label >5.Serum cholesterol in mg/dl:</label><input name="chol" type="number" value="213"></div><br><br>
+
+        <div class="col-md-4-col-sm-4" align="center"> <label>6.Fasting blood sugar(>120 mg/dl):</label>
+        <input type="radio"  name="fbs" value="0">
+        <label for="0">0</label>
+        <input type="radio"  name="fbs" value="1">
+        <label for="1">1</label></div><br><br>
+
+
+        <div class="col-md-4-col-sm-4" align="center"> <label>7.Resting electrocardiographic results:</label><br>
+         <input type="radio" name="restecg" value="0" >
+        <label for="0">0( normal)</label><br>
+        <input type="radio" name="restecg" value="1" >
+        <label for="1">1(having ST-T wave abnormality (T wave inversions and/or ST elevation or depression of > 0.05 mV))</label><br>
+        <input type="radio" name="restecg" value="2" >
+        <label for="2">2(showing probable or definite left ventricular hypertrophy by Estes' criteria)</label></div><br><br>
+
+        <div class="col-md-4-col-sm-4" align="center"> <label >8.Maximum Heart Rate Achieved:</label><input name="thalach" type="number" value="165"></div><br><br>
+
+        <div class="col-md-4-col-sm-4" align="center"> <label >9.Exercise induced angina:</label>
+        <input type="radio"  name="exang" value="0">
+        <label for="0">0</label>
+        <input type="radio" name="exang" value="1">
+        <label for="1">1</label></div><br><br>
+
+        <div class="col-md-4-col-sm-4" align="center"> <label >10.old Peak:</label><input name="oldpeak" type="number" step="0.001" value="0"></div><br><br>
+
+        <div class="col-md-4-col-sm-4" align="center"> <label >11.Slope:</label><input name="slope" type="number" value="1"></div><br><br>
+
+        <div class="col-md-4-col-sm-4" align="center"> <label >12.Coloured by flourosopy:</label>
+        <input type="radio" id="0" name="ca" value="0" >
+        <label for="0">0</label>
+        <input type="radio" id="1" name="ca" value="1" >
+        <label for="1">1</label>
+        <input type="radio" id="2" name="ca" value="2" >
+        <label for="2">2</label>
+        <input type="radio" id="3" name="ca" value="3">
+        <label for="3">3</label> </div><br><br>
+
+        <div class="col-md-4-col-sm-4" align="center"> <label >13.Thal:</label><input name="thal" type="number" value="2"> </div><br><br>
+        <br>
+        <div class="col-md-4-col-sm-4" align="center"><input align="center" type="submit" value="submit" ></div>
+
+    </div>
+</div>
+</header>
+</body>
+
+
+
